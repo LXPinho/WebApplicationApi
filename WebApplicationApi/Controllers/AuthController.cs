@@ -8,9 +8,9 @@ namespace WebApplicationApi.Controllers
     public class AuthController : Controller
     {
         [HttpPost]
-        public IActionResult Auth(string username, string password)
+        public IActionResult Auth(string username = "luciano", string password= "123456")
         {
-            Model.UserModel user = new Model.UserModel(1, "luciano", "123456");
+            Model.UserModel user = new Model.UserModel(1, username, password);
             IActionResult actionResult = BadRequest("Usuário ou senha inválidos");
             if ( username == user.Nome && password == user.Senha )
             {
