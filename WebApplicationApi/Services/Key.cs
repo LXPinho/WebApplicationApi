@@ -6,11 +6,7 @@
 
         public static string generateKey()
         {
-            string secret = string.Empty;
-            for (int j = 1; j < 2; j++)
-                for (int i = 1; i < 128; i++)
-                    secret += Convert.ToString(j);
-            return secret;
+            return @"5+IV)E2glD3xCH2rNTElZ_at9(TbG1N(E=pH)29*";
         }
     }
 }
